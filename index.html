@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIE Session Navigator — by ZCode</title>
+  <meta name="description" content="Pick the right AI Engineer World's Fair sessions for your persona and interests. A ZCode booth demo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================= HEADER ============================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">◆</span>
+        <div class="brand-text">
+          <span class="brand-title">AIE Session Navigator</span>
+          <span class="brand-sub">AI Engineer World's Fair · booth demo by ZCode</span>
+        </div>
+      </div>
+      <div class="header-cta">
+        <span class="header-pill">Live at the ZCode booth</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================= HERO ============================= -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">Find your sessions in under 5 seconds.</h1>
+      <p class="hero-lede">
+        Tell us who you are and what you care about. We rank the sessions worth your time —
+        and show you exactly how ZCode fits the work you came here to do.
+      </p>
+      <ul class="hero-strengths" aria-label="What ZCode does">
+        <li>Long-horizon tasks</li>
+        <li>Goal-driven iteration</li>
+        <li>Browser preview</li>
+        <li>Git-aware changes</li>
+        <li>Transparent cost</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================= MAIN ============================= -->
+  <main id="main" class="container layout">
+
+    <!-- ---------- LEFT: Controls ---------- -->
+    <section class="panel controls-panel" aria-label="Filters">
+      <div class="control-block">
+        <div class="control-head">
+          <h2 class="control-title">1 · Who are you?</h2>
+          <span class="control-hint">Pick your persona</span>
+        </div>
+        <div id="persona-grid" class="persona-grid" role="group" aria-label="Persona selection"></div>
+      </div>
+
+      <div class="control-block">
+        <div class="control-head">
+          <h2 class="control-title">2 · What tracks?</h2>
+          <span class="control-hint">Select any combination</span>
+        </div>
+        <div id="track-grid" class="track-grid" role="group" aria-label="Track filters"></div>
+      </div>
+
+      <div class="control-block">
+        <div class="control-head">
+          <h2 class="control-title">3 · How much time?</h2>
+        </div>
+        <div id="time-grid" class="time-grid" role="group" aria-label="Time budget"></div>
+      </div>
+
+      <button id="reset-btn" class="btn btn-secondary" type="button" aria-label="Reset all filters">
+        Reset filters
+      </button>
+    </section>
+
+    <!-- ---------- RIGHT: Results ---------- -->
+    <section class="results" aria-label="Recommended sessions">
+      <div class="results-head">
+        <div id="result-summary" class="result-summary" aria-live="polite"></div>
+      </div>
+      <div id="session-list" class="session-list"></div>
+    </section>
+  </main>
+
+  <!-- ============================= BOOTH ANGLE ============================= -->
+  <section class="booth-section" aria-label="ZCode booth conversation angle">
+    <div class="container">
+      <div id="booth-angle" class="booth-card"></div>
+    </div>
+  </section>
+
+  <!-- ============================= FOOTER ============================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">◆</span>
+        <span>ZCode</span>
+      </div>
+      <p class="footer-note">
+        Booth demo. Seed sessions are illustrative — swap in the official schedule any time by editing <code>data.js</code>.
+      </p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
